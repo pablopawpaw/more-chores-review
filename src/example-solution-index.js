@@ -51,16 +51,21 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       let chorePriorityInput = document.createElement('input')
       chorePriorityInput.value = json.priority
+      chorePriorityInput.id = json.id
       chorePriorityInput.addEventListener('blur', editChore)
       choreDiv.append(chorePriorityInput)
       choreDiv.className = 'chore-card'
       choreList.append(choreDiv)
+      clearNewChoreForm()
     })
   }
 
   function editChore(event) {
-    console.log(event.target.value)
-    // execute patch here
+    const newPriority = event.target.value
+    const id = event.target.parentNode.children[0].dataset.id
+
+    console.log(newPriority)
+    console.log(id)
   }
 
   function deleteChore(event){
@@ -70,5 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch(`http://localhost:3000/chores/${choreID}`, {
         method:"DELETE"})
     }
+  }
+
+  function clearNewChoreForm(){
+    const formInputs = document.querySelectorAll("form input")
+    formInputs.forEach(i => i.value = "")
   }
 })
