@@ -3,12 +3,12 @@
     {
       "id": 1,
       "title": "Wash Dishes",
-      "priority": "nnnnnaaaaaaaahhhh",
+      "priority": "nah",
       "duration": "15min"
     },
     {
       "title": "high five son",
-      "priority": "v high",
+      "priority": "highg",
       "duration": "so long",
       "id": 5
     },
@@ -17,6 +17,12 @@
       "priority": "another new task",
       "duration": "it's so new",
       "id": 7
+    },
+    {
+      "title": "sleep",
+      "priority": "high high",
+      "duration": "24 hours",
+      "id": 8
     }
   ]
 }
